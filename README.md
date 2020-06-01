@@ -10,13 +10,33 @@
 
 ```npm install```
 
+### Create Sqlite database
 
-### Start the app
+1. Ensure you have Sqlite3 installed on your computer.
+
+2. Move to the db folder. Run below command.
+
+```
+$ sqlite3 texts.sqlite
+sqlite> .read migrate.sql
+sqlite> .exit
+```
+
+### Environment variables
+
+Make sure you setup a JWT_SECRET
+
+```export JWT_SECRET="yourlongsecret"```
+
+
+### Start server
+
+Everything has been setup. Let's start up the server.
 
 ```npm start```
 
 
-### Test the app
+### Test the server
 
 ```npm test```
 
