@@ -1,0 +1,15 @@
+build:
+  environment:
+    node: v12.10.0
+    variables:
+      JWT_SECRET: 'LONGESTSECRETEVER'
+  tests:
+    override:
+      - command: npm test
+        coverage:
+          file: coverage/clover.xml
+          format: clover
+filter:
+  excluded_paths:
+  - "node_modules/"
+  - "coverage/"
